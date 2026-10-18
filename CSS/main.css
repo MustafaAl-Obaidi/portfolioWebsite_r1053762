@@ -9,3 +9,18 @@
     indien nodig 
     (ben er nog steeds niet zeker van)
 */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: #FAF7F2;
+    color: #3E2C23;
+}
+
+h1, h2, h3{
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
