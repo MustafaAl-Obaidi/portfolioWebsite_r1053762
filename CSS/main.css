@@ -19,10 +19,11 @@ body{
     margin: .1rem;
     padding: .1rem;
 }
+
 header{
     background-color: #3E2C23;
     color: #FAF7F2;
-    padding: 18px;
+    padding: 20px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -37,6 +38,26 @@ nav a{
 }
 nav a:hover{
     color: #E07A3F;
+}
+
+section{
+    margin-bottom: 30px;
+}
+article{
+    border: 1px solid #EFE8DD;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+img{
+    max-width: 100%;
+    height: 20rem;
+}
+#profilePhoto{
+    display: block;
+    margin: 5px;
+    padding: 5px;
 }
 
 h1, h2, h3{
@@ -66,3 +87,50 @@ a:hover{
     text-decoration: none;
 }
 
+.vaardigheden{
+    border-collapse: collapse;
+    background-color: white;
+}
+caption{
+    font-family: "JetBrains", monospace;
+    font-weight: bold;
+}
+th, td{
+    border: 2px solid #EFE8DD;
+    padding: 5px;
+}
+th{
+    background-color: #3E2C23;
+    color: #FAF7F2;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+label{
+    font-weight: bold;
+}
+input, textarea{
+    padding: 5px;
+    border: 1px solid #3E2C23;
+    border-radius: 5px;
+}
+button{
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #3E2C23;
+    color: #FAF7F2;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #C9652E;
+}
+
+footer{
+    background-color: #EFE8DD;
+    text-align: center;
+    padding: 15px;
+}
