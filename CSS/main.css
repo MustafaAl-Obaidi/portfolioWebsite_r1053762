@@ -12,12 +12,20 @@
 *{
     box-sizing: border-box;
 }
-body{
+body{ 
     font-family: "Inter", sans-serif;
     background-color: #FAF7F2;
     color: #3E2C23;
     margin: .1rem;
     padding: .1rem;
+    justify-content: center;
+    align-items: center;
+}
+/* Ik heb geen idee hoe ik alle content op de pagina's moet centreren. Geen tijd meer, dus moet ik het zo uploaden ;( */
+main{
+    max-width: 900px;
+    margin: 0;
+    padding: 25px;
 }
 
 header{
