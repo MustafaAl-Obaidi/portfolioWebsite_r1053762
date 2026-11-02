@@ -18,10 +18,19 @@ body{
     color: #3E2C23;
     margin: .1rem;
     padding: .1rem;
+}
+/*
+body{ 
+    font-family: "Inter", sans-serif;
+    background-color: #FAF7F2;
+    color: #3E2C23;
+    margin: .1rem;
+    padding: .1rem;
     justify-content: center;
     align-items: center;
 }
-/* Ik heb geen idee hoe ik alle content op de pagina's moet centreren. Geen tijd meer, dus moet ik het zo uploaden ;( */
+*/
+
 main{
     max-width: 900px;
     margin: 0;
@@ -55,6 +64,12 @@ nav a{
     margin-left: 15px;
 }
 nav a:hover{
+    color: #E07A3F;
+}
+.navbar-brand{
+    color: #FAF7F2;
+}
+.navbar-brand:hover{
     color: #E07A3F;
 }
 
@@ -135,6 +150,8 @@ input, textarea{
     border: 1px solid #3E2C23;
     border-radius: 5px;
 }
+
+/*
 button{
     padding: 10px;
     margin-top: 10px;
@@ -146,7 +163,7 @@ button{
 button:hover{
     background-color: #C9652E;
 }
-
+*/
 footer{
     background-color: #EFE8DD;
     text-align: center;
