@@ -11,56 +11,139 @@
 
     <!-- Icon -->
     <link rel="icon" href="./img/favicon.ico">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/main.css">
-    <!-- Googlefonts -->
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
+    <!-- Boostrap CSS -->
+        <!-- Local link -->
+    <link rel="stylesheet" href="./vendor/Bootstrap v-5_3_x/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header>
-        <p id="headerNameIcon">Test</p> <!-- Not sure if I'll use a picture or something or simply my name, so I'll just name it like this for now :/ -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand">M.A.O</a>
 
-        <nav>
-            <a href="./index.html">Hoofdpagina</a>
-            <a href="./cv.html">CV</a>
-            <a href="./hobby-interesse.html">Hobby's/Interesse</a>
-            <a href="./ervaring.html">Ervaring</a>
-            <a href="./contact.html">Contact</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Menu openen">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="navbar-item text-center">
+                            <a href="./index.html" class="navbar-link active">Hoofdpagina</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./cv.html" class="navbar-link active">CV</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./hobby-interesse.html" class="navbar-link active">Hobby's/Interesse</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./ervaring.html" class="navbar-link active">Ervaring</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./contact.html" class="navbar-link active">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <hr>
 
-    <main> 
-        <h1>Contact formulier</h1>
+    <main class="container">
+        <h1>Contact</h1>
 
-        <form action="#" method="post">
-            <label for="naam">Naam</label>
-            <input type="text" id="naam" name="naam" required>
+        <div class="row">
+            <section class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Mijn gegevens</h2>
+                        <ul class="list-unstyled">
+                            <li><strong>Naam:</strong> Mustafa Al-Obaidi</li>
+                            <li><strong>Opleiding:</strong> Graduaat Programmeren, Thomas More</li>
+                            <li><strong>Woonplaats:</strong> Turnhout, België</li>
+                            <li><strong>E-mail:</strong>
+                                <a href="mailto:r1053762@student.thomasmore.be">r1053762@student.thomasmore.be</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-            <label for="email">Emailadres</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="onderwerp">Onderwerp</label>
-            <input type="text" id="onderwerp" name="onderwerp" required>
-
-            <label for="vraag">Uw vraag</label>
-            <textarea name="vraag" id="vraag" required></textarea>
-
-            <button type="submit">Verzenden</button>
-        </form>
-    </main><!-- It doesn't look good enough. 
-    Will change it later, not sure when.-->
+            <section class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Contactformulier</h2>
+                        <form action="https://tm-statweb.be/forms.php" method="post">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="voornaam" class="form-label">Voornaam *</label>
+                                    <input type="text" class="form-control" id="voornaam" name="voornaam" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="naam" class="form-label">Naam *</label>
+                                    <input type="text" class="form-control" id="naam" name="naam" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">E-mailadres *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="skill" class="form-label">Interesse in skill</label>
+                                    <select class="form-select" id="skill" name="skill">
+                                        <option value="" selected>Kies een skill...</option>
+                                        <option value="java">Java</option>
+                                        <option value="csharp">C#</option>
+                                        <option value="python">Python</option>
+                                        <option value="html-css">HTML &amp; CSS</option>
+                                        <option value="bootstrap">Bootstrap</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="vraag" class="form-label">Uw vraag *</label>
+                                    <textarea class="form-control" id="vraag" name="vraag" rows="5" minlength="10" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-cta">Verzenden</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <hr>
 
     <footer>
-        <p>Geen copyright &lpar;&copy;&rpar;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2026 Mustafa Al-Obaidi</p>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://github.com/MustafaAl-Obaidi">
+                        <img src="./vendor/Bootstrap v-5_3_x/img/bootstrap-icons-1.13.2/github.svg" alt="GitHub"
+                            width="25" height="25">
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Boostrap JS -->
+        <!-- Local link -->
+    <script src="./vendor/Bootstrap v-5_3_x/js/bootstrap.min.js"></script>
 </body>
 
 </html>

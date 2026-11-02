@@ -11,37 +11,116 @@
 
     <!-- Icon -->
     <link rel="icon" href="./img/favicon.ico">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/main.css">
-    <!-- Googlefonts -->
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
+    <!-- Boostrap CSS -->
+        <!-- Local link -->
+    <link rel="stylesheet" href="./vendor/Bootstrap v-5_3_x/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header>
-        <p id="headerNameIcon">Test</p>
-        <!-- Not sure if I'll use a picture or something or simply my name, so I'll just name it like this for now :/ -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand">M.A.O</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu openen">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <nav>
-            <a href="./index.html">Hoofdpagina</a>
-            <a href="./cv.html">CV</a>
-            <a href="./hobby-interesse.html">Hobby's/Interesse</a>
-            <a href="./ervaring.html">Ervaring</a>
-            <a href="./contact.html">Contact</a>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="navbar-item text-center">
+                            <a href="./index.html" class="navbar-link active">Hoofdpagina</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./cv.html" class="navbar-link active">CV</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./hobby-interesse.html" class="navbar-link active">Hobby's/Interesse</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./ervaring.html" class="navbar-link active">Ervaring</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./contact.html" class="navbar-link active">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <hr>
 
-    <main>
+    <main class="container">
+        <section class="hero text-center">
+            <h1>Welkcom</h1>
+            <p class="lead">
+                Ik ben student Graduaat Programmeren aan Thomas More.
+                Ik denk graag goed na over een ontwerp voordat ik begin te bouwen.
+            </p>
+        </section>
+
+        <section class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="./cv.html">
+                            <img src="./img/stand-in_profile-photo.webp" alt="Mijn CV" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h2 class="card-title h5">Curriculum Vitae</h2>
+                            <p class="card-text">Mijn opleiding, talen en vaardigheden in één overzicht.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="./hobby-interesse.html">
+                            <img src="./img/compressed/pexels-fernanda-neitzel-2155821056-36662696-compressed.webp" alt="Mijn hobby's" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h2 class="card-title h5">Hobby's &amp; Interesses</h2>
+                            <p class="card-text">Wat ik in mijn vrije tijd doe: pc-hardware en viool.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="./ervaring.html">
+                            <img src="./img/compressed/pexels-kanhaiya-sharma-284427440-13062567.webp" alt="Mijn ervaring" class="card-img-top" >
+                        </a>
+                        <div class="card-body">
+                            <h2 class="card-title h5">Ervaring</h2>
+                            <p class="card-text">Mijn werkervaring en de projecten waaraan ik werkte.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="./contact.html">
+                            <img src="./img/compressed/pexels-nascimento-jr-1451812733-29985392-compressed.webp" alt="Mijn hobby's" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h2 class="card-title h5">Contact gegevens</h2>
+                            <p class="card-text">Mijn contact gegevens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
         <section>
             <h1>Welkom</h1>
 
             <img src="./img/stand-in_profile-photo.webp" alt="Foto van Mustafa Al-Obaidi" id="profilePhoto">
-            <!-- Inappropraite picture, I know, but I do not like how I look, so please bear with this stupid decision for now. -->
 
             <p>
                 Ik volg Graduaat Programmeren bij Thomas More.
@@ -78,13 +157,29 @@
                     href="./hobby-interesse.html">Hobby's &amp; Interesses</a>
             </p>
         </section>
+        -->
     </main>
 
     <hr>
 
     <footer>
-        <p>Geen copyright &lpar;&copy;&rpar;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2026 Mustafa Al-Obaidi</p>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://github.com/MustafaAl-Obaidi">
+                        <img src="./vendor/Bootstrap v-5_3_x/img/bootstrap-icons-1.13.2/github.svg" alt="GitHub" width="25" height="25">
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Boostrap JS -->
+        <!-- Local link -->
+    <script src="./vendor/Bootstrap v-5_3_x/js/bootstrap.min.js"></script>
 </body>
 
 </html>

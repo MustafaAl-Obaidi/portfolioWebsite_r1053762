@@ -11,121 +11,171 @@
 
     <!-- Icon -->
     <link rel="icon" href="./img/favicon.ico">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/main.css">
-    <!-- Googlefonts -->
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
+    <!-- Boostrap CSS -->
+        <!-- Local link -->
+    <link rel="stylesheet" href="./vendor/Bootstrap v-5_3_x/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Externe vendor Swiper voor IT vaardigheden -->
+        <!-- geen idee waarom het niet werkt. zal er later aan werken -->
+    <link rel="stylesheet" href="./vendor/Swiper/swiper.min.js">
+    <script src="./vendor/Swiper/swiper.min.css"></script>
 </head>
 
 <body>
     <header>
-        <p id="headerNameIcon">Test</p> <!-- Not sure if I'll use a picture or something or simply my name, so I'll just name it like this for now :/ -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand">M.A.O</a>
 
-        <nav>
-            <a href="./index.html">Hoofdpagina</a>
-            <a href="./cv.html">CV</a>
-            <a href="./hobby-interesse.html">Hobby's/Interesse</a>
-            <a href="./ervaring.html">Ervaring</a>
-            <a href="./contact.html">Contact</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Menu openen">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="navbar-item text-center">
+                            <a href="./index.html" class="navbar-link active">Hoofdpagina</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./cv.html" class="navbar-link active">CV</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./hobby-interesse.html" class="navbar-link active">Hobby's/Interesse</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./ervaring.html" class="navbar-link active">Ervaring</a>
+                        </li>
+                        <li class="navbar-item text-center">
+                            <a href="./contact.html" class="navbar-link active">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <hr>
 
-    <main>
-        <section>
-            <h1>Curriculum Vitae</h1>
+    <main class="container">
+        <h1>Curriculum Vitae</h1>
 
-            <p>
-                Hieronder vindt u een overzicht van mijn opleidingen, vaardigheden, en talen.
-            </p>
+        <section class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="./img/stand-in_profile-photo.webp" alt="Foto" id="profilePhoto">
+            </div>
+            <div class="col-md-8">
+                <p><b>
+                    Ik ben student Graduaat Programmeren aan Thomas More.
+                    Hieronder vindt u een overzicht van mijn opleiding, werkervaring, talen en vaardigheden.
+                </p></b>
+            </div>
         </section>
 
-        <section>
-            <h2>Opleding</h2>
+        <div class="row g-4">
+            <section class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Opleiding</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>Graduaat Programmeren</strong><br>
+                                Thomas More, Geel - 2026 tot heden
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-            <ul>
-                <li>
-                    <strong>
-                        Graduaat Programmeren
-                    </strong>
-                     - Thomas More &lpar;2026 - heden&rpar;
-                </li>
-                <li>
-                    <strong>
-                        &lbrack;TSO Secundair Onderwijs&rbrack;
-                    </strong>
-                    - Campos - &lpar;2024&rpar;
-                </li>
-            </ul>
-        </section>
+            <section class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Werkervaring</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>UGC</strong><br>
+                                ... - 2022 tot heden
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <section>
+            <section class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Talen</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Nederlands <span class="badge badge-taal">Zeer goed</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                Engels <span class="badge badge-taal">Zeer goed</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                Frans <span class="badge badge-taal">basis</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="mt-5">
             <h2>Vaardigheden</h2>
-
-            <table class="vaardigheden">
-                <caption>Overzicht van mijn technische vaardigheden</caption>
-
-                <thead>
-                    <tr>
-                        <th>Categorie</th>
-                        <th>Vaardigheid</th>
-                        <th>Niveau</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Programmeertalen</td>
-                        <td>Java</td>
-                        <td>Gevorderd</td>
-                    </tr>
-                    <tr>
-                        <td>Programmeertalen</td>
-                        <td>C#</td>
-                        <td>Gevorderd</td>
-                    </tr>
-                    <tr>
-                        <td>Programmeertalen</td>
-                        <td>Python</td>
-                        <td>Basis</td>
-                    </tr>
-                    <tr>
-                        <td>Web</td>
-                        <td>HTML &amp; CSS</td>
-                        <td>Basis</td>
-                    </tr>
-                    <tr>
-                        <td>Overig</td>
-                        <td>Netwerken</td>
-                        <td>Basis</td>
-                    </tr>
-                    <tr>
-                        <td>Overig</td>
-                        <td>Cloud &amp; DevOps</td>
-                        <td>Basis</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Talen</h2>
-
-            <ul>
-                <li>Nederlands - zeer goed</li>
-                <li>Engels - zeer goed</li>
-            </ul>
+            <div class="swiper skills-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/skills/java-original-wordmark.svg" alt="Java">
+                        <p>Java</p>
+                    </div>
+                    <div class="swiper-slide"><img src="./img/skills/csharp-line.svg" alt="C#">
+                        <p>C#</p>
+                    </div>
+                    <div class="swiper-slide"><img src="./img/skills/python-original-wordmark.svg" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="swiper-slide"><img src="./img/skills/html5-original-wordmark.svg" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                    <div class="swiper-slide"><img src="./img/skills/css3-original-wordmark.svg" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                    <div class="swiper-slide"><img src="./img/skills/bootstrap-original-wordmark.svg" alt="Bootstrap">
+                        <p>Bootstrap</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
     </main>
 
     <hr>
 
     <footer>
-        <p>Geen copyright &lpar;&copy;&rpar;</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2026 Mustafa Al-Obaidi</p>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://github.com/MustafaAl-Obaidi">
+                        <img src="./vendor/Bootstrap v-5_3_x/img/bootstrap-icons-1.13.2/github.svg" alt="GitHub"
+                            width="25" height="25">
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Boostrap JS -->
+        <!-- Local link -->
+    <script src="./vendor/Bootstrap v-5_3_x/js/bootstrap.min.js"></script>
 </body>
 
 </html>
