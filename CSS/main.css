@@ -174,3 +174,23 @@ footer{
     text-align: center;
     padding: 15px;
 }
+
+/* Mijn CSS file is nu super rommelig geworden ._. */
+.hero{
+    background-color: #EFE8DD;
+}
+
+.btn-cta{
+    background-color: #E07A3F;
+    color: white;
+}
+
+.btn-cta:hover{
+    background-color: #C9652E;
+    color: white;
+}
+
+.card-img-top{
+    height: 200px;
+    object-fit: cover;
+}
